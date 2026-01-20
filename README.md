@@ -21,3 +21,26 @@ This is a simple web project that lets users add comments to a web page. The mai
 Just open the HTML file in your browser and start adding comments!
 
 This project is for learning basic JavaScript and DOM manipulation.
+
+---
+
+## bubble.html
+
+`bubble.html` is a demonstration of JavaScript event bubbling in the DOM.
+
+### What it Shows
+- How click events propagate (bubble) from a child element up to its parent elements.
+- Each element (`li`, `ol`, `section`) has its own click event handler that logs a message to the console.
+
+### How to Use
+1. Open `bubble.html` in your browser.
+2. Open the browser's developer console (usually F12 or right-click → Inspect → Console).
+3. Click on any list item (`li`).
+4. Observe the order of log messages in the console:
+	- Clicking a list item triggers its own handler, then the `ol` handler, then the `section` handler, showing the bubbling process.
+
+### Code Structure
+- Inline CSS for visual distinction of each element.
+- JavaScript at the bottom of the file sets up event listeners for `li`, `ol`, and `section`.
+
+This file is useful for understanding how event bubbling works in the DOM.

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event Bubble</title>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 4px;
+        border: 2px solid gray;
+        padding: 20px;
+    }
+    
+    section {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 4px;
+        border: 2px solid purple;
+        padding: 20px;
+    }
+    
+    ol {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 4px;
+        border: 2px solid green;
+        padding: 20px;
+    }
+    
+    li {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 4px;
+        border: 2px solid orange;
+        padding: 20px;
+    }
+</style>
+
+<body>
+    <h1>Explore Event bubble</h1>
+    <section id="list-container">
+        <h3>List of things</h3>
+        <ol id="item-list">
+            <li id="item-1">Lorem, ipsum.</li>
+            <li id="item-2">Omnis, voluptatibus!</li>
+            <li id="item-3">Dolore, animi.</li>
+            <li id="item-4">Omnis, saepe.</li>
+            <li id="item-5">Minima, maxime.</li>
+            <li id="item-6">Enim, sint?</li>
+        </ol>
+    </section>
+    <script>
+        //list item 1 click handler
+        document.getElementById('item-1').addEventListener('click', function(event) {
+                console.log('li 1 clicked');
+                event.stopPropagation();
+            })
+            //list item 2 click handler
+        document.getElementById('item-2').addEventListener('click', function(event) {
+                console.log('li 2 clicked');
+                event.stopPropagation();
+            })
+            //list item 3 click handler
+        document.getElementById('item-3').addEventListener('click', function(event) {
+                console.log('li 3 clicked');
+                event.stopImmediatePropagation();
+            })
+            //list item 4 click handler
+        document.getElementById('item-4').addEventListener('click', function(event) {
+                console.log('li 4 clicked');
+                event.stopPropagation();
+            })
+            //list item 5 click handler
+        document.getElementById('item-5').addEventListener('click', function(event) {
+                console.log('li 5 clicked');
+                event.stopPropagation();
+            })
+            //list item 6 click handler
+        document.getElementById('item-6').addEventListener('click', function(event) {
+            console.log('li 6 clicked');
+            event.stopPropagation();
+        })
+
+        //ol click handler
+
+        document.getElementById('item-list').addEventListener('click', function(event) {
+                console.log('ol clicked');
+                event.stopPropagation();
+
+            })
+            //section click handler
+        document.getElementById('list-container').addEventListener('click', function(event) {
+            console.log('section clicked');
+            event.stopPropagation();
+
+        })
+    </script>
+</body>
+
+</html>
