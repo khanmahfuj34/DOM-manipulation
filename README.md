@@ -44,3 +44,27 @@ This project is for learning basic JavaScript and DOM manipulation.
 - JavaScript at the bottom of the file sets up event listeners for `li`, `ol`, and `section`.
 
 This file is useful for understanding how event bubbling works in the DOM.
+
+---
+
+## delegate.html
+
+`delegate.html` demonstrates the concept of event delegation in JavaScript.
+
+### What it Shows
+- How to use a single event listener on a parent element (`ol`) to handle events for all its child elements (`li`).
+- How new items added dynamically to the list are automatically handled by the same event listener.
+- Clicking any list item removes it from the list.
+- A button allows you to add new items to the list.
+
+### How to Use
+1. Open `delegate.html` in your browser.
+2. Click any list item to remove it from the list.
+3. Click the "Add new Item" button to add a new item to the list. The new item can also be removed by clicking it.
+
+### Code Structure
+- The JavaScript uses event delegation by attaching a single click event listener to the `ol` element.
+- When a list item is clicked, the event handler removes the clicked item using `event.target.parentNode.removeChild(event.target)`.
+- The add button creates a new `li` element and appends it to the list.
+
+This file is useful for learning efficient event handling and dynamic DOM manipulation using event delegation.
